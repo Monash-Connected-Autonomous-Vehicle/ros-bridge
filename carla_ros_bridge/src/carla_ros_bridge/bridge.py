@@ -22,6 +22,7 @@ from distutils.version import LooseVersion
 from threading import Thread, Lock, Event
 
 import carla
+import time
 
 import ros_compatibility as roscomp
 from ros_compatibility.node import CompatibleNode
@@ -250,6 +251,7 @@ class CarlaRosBridge(CompatibleNode):
         """
         execution loop for synchronous mode
         """
+        time.sleep(2)
         while not self.shutdown.is_set() and roscomp.ok():
             self.process_run_state()
 

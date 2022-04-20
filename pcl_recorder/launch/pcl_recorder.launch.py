@@ -30,7 +30,7 @@ def generate_launch_description():
             name='role_name',
             default_value='ego_vehicle'
         ),
-        launch.actions.OpaqueFunction(function=launch_enable_autopilot_publisher),
+#        launch.actions.OpaqueFunction(function=launch_enable_autopilot_publisher),
         launch_ros.actions.Node(
             package='pcl_recorder',
             executable='pcl_recorder_node',
